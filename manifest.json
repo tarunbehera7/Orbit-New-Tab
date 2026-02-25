@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "Orbit New Tab",
+  "version": "1.0.0",
+  "description": "Your web, your way. A customizable new tab page.",
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": [
+    "storage",
+    "unlimitedStorage"
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  }
+}
