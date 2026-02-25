@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit New Tab</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header Area -->
+        <div class="header-space">
+            <h1 id="clock">00:00</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" class="search-input" placeholder="Search with Google...">
+                <a href="options.html" class="settings-link" title="Settings">⚙️</a>
+            </div>
+        </div>
+
+        <!-- Bookmark Grid -->
+        <div id="bookmark-grid">
+            <!-- Items rendered via JS -->
+            <button id="add-btn" class="icon-card">
+                <div class="icon-img-wrapper">
+                    <span>+</span>
+                </div>
+                <span class="bookmark-title">Add New</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal Overlay -->
+    <div id="modal" class="modal-overlay">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Custom Website</h2>
+                <button id="close-modal" class="close-btn">&times;</button>
+            </div>
+
+            <div class="form-field">
+                <label class="form-label">URL</label>
+                <input type="text" id="bm-url" placeholder="e.g. github.com" class="form-input">
+            </div>
+
+            <span class="section-label">Select Icon</span>
+            <div class="icon-selector-area">
+                <div class="icon-option">
+                    <div id="btn-auto-icon" class="icon-option-box active">
+                        <img id="auto-icon-preview"
+                            src="https://www.gstatic.com/images/icons/material/system/2x/web_black_24dp.png" alt="Auto"
+                            title="Auto fetch" aria-label="Auto fetch">
+                    </div>
+                    <span class="icon-option-label">Auto fetch</span>
+                </div>
+                <div class="icon-option">
+                    <div id="icon-upload-btn" class="icon-option-box">
+                        <span id="upload-plus" class="text-2xl text-slate-400">+</span>
+                        <img id="icon-preview" class="hidden w-full h-full object-cover">
+                    </div>
+                    <span class="icon-option-label">Local icon</span>
+                </div>
+            </div>
+            <input type="file" id="icon-input" class="hidden" accept="image/*">
+
+            <div class="form-field">
+                <label class="form-label">Icon Text (Title)</label>
+                <input type="text" id="bm-title" placeholder="Website title" class="form-input">
+            </div>
+
+            <button id="save-bm" class="add-confirm-btn">Add</button>
+        </div>
+    </div>
+
+    <script src="sortable.min.js"></script>
+    <script src="newtab.js"></script>
+</body>
+
+</html>
