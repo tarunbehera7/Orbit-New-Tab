@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orbit Options</title>
+    <link rel="stylesheet" href="options.css">
+</head>
+
+<body>
+    <div class="options-container">
+        <header class="options-header">
+            <h1>Orbit Settings</h1>
+            <p>Customize your new tab experience</p>
+        </header>
+
+        <main>
+            <!-- Appearance Section -->
+            <section class="settings-section">
+                <h2>Appearance</h2>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label>Background Image URL</label>
+                        <p>Enter a URL for a custom background (Unsplash recommended)</p>
+                    </div>
+                    <input type="text" id="bg-url" class="setting-input"
+                        placeholder="e.g. https://images.unsplash.com/...">
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label>Theme</label>
+                        <p>Choose your preferred color scheme (Coming soon)</p>
+                    </div>
+                    <select id="theme-select" class="setting-input" disabled>
+                        <option value="dark">Dark (Default)</option>
+                        <option value="light">Light</option>
+                    </select>
+                </div>
+            </section>
+
+            <!-- Data Management -->
+            <section class="settings-section">
+                <h2>Data Management</h2>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label>Export Config</label>
+                        <p>Download your bookmarks and settings as a JSON file</p>
+                    </div>
+                    <button id="export-btn" class="btn btn-secondary">Export JSON</button>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info">
+                        <label>Import Config</label>
+                        <p>Restore your data from a backup file</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button id="import-trigger" class="btn btn-secondary">Import JSON</button>
+                        <input type="file" id="import-input" class="hidden" accept=".json">
+                    </div>
+                </div>
+                <div class="setting-item">
+                    <div class="setting-info danger">
+                        <label>Reset Data</label>
+                        <p>Delete all bookmarks and reset to defaults</p>
+                    </div>
+                    <button id="reset-btn" class="btn btn-danger">Reset All</button>
+                </div>
+            </section>
+        </main>
+
+        <footer class="options-footer">
+            <button id="save-settings" class="btn btn-primary">Save Settings</button>
+            <span id="status-msg"></span>
+        </footer>
+    </div>
+    <script src="options.js"></script>
+</body>
+
+</html>
